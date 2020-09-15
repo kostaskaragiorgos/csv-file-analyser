@@ -7,5 +7,5 @@ def HaveEmptyCells(dataframe):
     return "YES" if dataframe.isnull().any else "NO"
 
 def HaveDuplicates(dataframe):
-    retrun "YES" if dataframe.duplicated().any else "NO"
+    return "YES" if dataframe.duplicated().any else "NO"
 

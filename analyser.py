@@ -1,13 +1,11 @@
 import sys
-from analyse import CreateDataFrame, FindEmptyCells
+from analyse import CreateDataFrame, HaveEmptyCells
 
 def GetReport(inputfile, outputfile):
     f = CreateDataFrame(inputfile)
     with open(outputfile, 'w') as outputf:
         outputf.write("Empty Cells:"+  HaveEmptyCells(f))
-
-
-
+        
 def main():
     if len(sys.argv) < 3:
         print("The arguments should be the script name , a .csv file as an input file and a .txt file as an output file")

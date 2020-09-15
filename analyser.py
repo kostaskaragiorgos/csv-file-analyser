@@ -1,11 +1,12 @@
 import sys
-from analyse import CreateDataFrame, HaveEmptyCells, HaveDuplicates
+from analyse import CreateDataFrame, HaveEmptyCells, HaveDuplicates, getShape
 
 def GetReport(inputfile, outputfile):
     f = CreateDataFrame(inputfile)
     with open(outputfile, 'w') as outputf:
         outputf.write("Empty Cells:"+  HaveEmptyCells(f))
         outputf.write("Duplicates"+ HaveDuplicates(f))
+        outputf.write("Shape:"+ str(getShape(f)))
         
 def main():
     if len(sys.argv) < 3:

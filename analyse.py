@@ -13,4 +13,10 @@ def getShape(dataframe):
     return dataframe.shape
 
 def getIndex(dataframe):
+    """ Returns the index of a dataframe
+    Args:
+        A dataframe
+    Returns:
+        the dataframe index
+    """
     return dataframe.index

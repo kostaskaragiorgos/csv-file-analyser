@@ -10,7 +10,7 @@ def HaveDuplicates(dataframe):
     return "YES" if dataframe.duplicated().any else "NO"
 
 def getShape(dataframe):
-        """ Returns the shape of a dataframe
+    """ Returns the shape of a dataframe
     Args:
         A dataframe
     Returns:

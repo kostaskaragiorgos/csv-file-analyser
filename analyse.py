@@ -10,6 +10,12 @@ def HaveDuplicates(dataframe):
     return "YES" if dataframe.duplicated().any else "NO"
 
 def getShape(dataframe):
+        """ Returns the shape of a dataframe
+    Args:
+        A dataframe
+    Returns:
+        the shape of the dataframe
+    """
     return dataframe.shape
 
 def getIndex(dataframe):
@@ -17,6 +23,6 @@ def getIndex(dataframe):
     Args:
         A dataframe
     Returns:
-        the dataframe index
+        the index number of the dataframe
     """
     return dataframe.index

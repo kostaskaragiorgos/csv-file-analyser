@@ -9,3 +9,5 @@ def HaveEmptyCells(dataframe):
 def HaveDuplicates(dataframe):
     return "YES" if dataframe.duplicated().any else "NO"
 
+def getShape(dataframe):
+    return dataframe.shape

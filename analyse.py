@@ -11,3 +11,6 @@ def HaveDuplicates(dataframe):
 
 def getShape(dataframe):
     return dataframe.shape
+
+def getIndex(dataframe):
+    return dataframe.index

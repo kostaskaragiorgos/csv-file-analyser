@@ -4,7 +4,7 @@ from analyse import CreateDataFrame, FindEmptyCells
 def GetReport(inputfile, outputfile):
     f = CreateDataFrame(inputfile)
     with open(outputfile, 'w') as outputf:
-        outputf.write("Empty Cells:"+  FindEmptyCells(f))
+        outputf.write("Empty Cells:"+  HaveEmptyCells(f))
 
 
 

@@ -1,6 +1,12 @@
 import pandas as pd
 
 def CreateDataFrame(filename):
+    """ Creates a dataframe
+    Args:
+        a filename
+    Return:
+        a dataframe
+    """
     f = pd.read_csv(filename)
     return pd.DataFrame(f)
 

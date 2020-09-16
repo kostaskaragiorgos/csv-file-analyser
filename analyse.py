@@ -7,6 +7,12 @@ def HaveEmptyCells(dataframe):
     return "YES" if dataframe.isnull().any else "NO"
 
 def HaveDuplicates(dataframe):
+    """ returns yes or no if the dataframe has duplicates
+    Args:
+        a dataframe
+    Returns:
+        YES OR NO
+    """
     return "YES" if dataframe.duplicated().any else "NO"
 
 def getShape(dataframe):

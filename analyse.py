@@ -4,6 +4,12 @@ def CreateDataFrame(filename):
     return pd.read_csv(filename)
 
 def HaveEmptyCells(dataframe):
+    """ returns yes or no if the dataframe has emptycells
+    Args:
+        a dataframe
+    Returns:
+        YES OR NO
+    """
     return "YES" if dataframe.isnull().any else "NO"
 
 def HaveDuplicates(dataframe):

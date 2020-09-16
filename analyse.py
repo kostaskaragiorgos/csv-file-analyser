@@ -1,7 +1,8 @@
 import pandas as pd
 
 def CreateDataFrame(filename):
-    return pd.read_csv(filename)
+    f = pd.read_csv(filename)
+    return pd.DataFrame(f)
 
 def HaveEmptyCells(dataframe):
     """ returns yes or no if the dataframe has emptycells

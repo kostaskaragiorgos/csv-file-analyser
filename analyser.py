@@ -1,13 +1,13 @@
 import sys
-from analyse import CreateDataFrame, HaveEmptyCells, HaveDuplicates, getShape, getIndex
+from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex
 
 def GetReport(inputfile, outputfile):
-    f = CreateDataFrame(inputfile)
+    f = createdataframe(inputfile)
     with open(outputfile, 'w') as outputf:
-        outputf.write("Empty Cells:"+  HaveEmptyCells(f))
-        outputf.write("Duplicates"+ HaveDuplicates(f))
-        outputf.write("Shape:"+ str(getShape(f)))
-        outputf.write("Index:"+ str(getIndex(f)))
+        outputf.write("Empty Cells:"+  haveemptycells(f))
+        outputf.write("Duplicates"+ haveduplicates(f))
+        outputf.write("Shape:"+ str(getshape(f)))
+        outputf.write("Index:"+ str(getindex(f)))
         
 def main():
     if len(sys.argv) < 3:

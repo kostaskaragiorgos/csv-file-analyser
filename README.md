@@ -30,6 +30,10 @@ cli app to analyse a csv file
 
 To install the dependencies
 
+<ul>
+  <li> Pandas (conda install -c anaconda pandas) </li>
+  <li> second way to install pandas ( pip install pandas) </li>
+</ul>
 
 or run
 

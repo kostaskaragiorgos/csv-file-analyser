@@ -1,16 +1,18 @@
+""" functions to analyse a csv file """
+
 import pandas as pd
 
-def CreateDataFrame(filename):
+def createdataframe(filename):
     """ Creates a dataframe
     Args:
         a filename
     Return:
         a dataframe
     """
-    f = pd.read_csv(filename)
-    return pd.DataFrame(f)
+    file = pd.read_csv(filename)
+    return pd.DataFrame(file)
 
-def HaveEmptyCells(dataframe):
+def haveemptycells(dataframe):
     """ returns yes or no if the dataframe has emptycells
     Args:
         a dataframe
@@ -19,7 +21,7 @@ def HaveEmptyCells(dataframe):
     """
     return "YES" if dataframe.isnull().any else "NO"
 
-def HaveDuplicates(dataframe):
+def haveduplicates(dataframe):
     """ returns yes or no if the dataframe has duplicates
     Args:
         a dataframe
@@ -28,7 +30,7 @@ def HaveDuplicates(dataframe):
     """
     return "YES" if dataframe.duplicated().any else "NO"
 
-def getShape(dataframe):
+def getshape(dataframe):
     """ Returns the shape of a dataframe
     Args:
         A dataframe
@@ -37,7 +39,7 @@ def getShape(dataframe):
     """
     return dataframe.shape
 
-def getIndex(dataframe):
+def getindex(dataframe):
     """ Returns the index of a dataframe
     Args:
         A dataframe

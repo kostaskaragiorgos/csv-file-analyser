@@ -11,7 +11,6 @@ cli app to analyse a csv file
   * [Table of contents](#Table_of_contents)
   * [Files/Folders](#Files/Folders)
   * [Dependencies](#Dependencies)
-  * [Documentation](#Documentation)
   * [Radon](#Radon)
     * [Radon cc](#Radon_cc)
     * [Radon hal](#Radon_hal)
@@ -21,7 +20,10 @@ cli app to analyse a csv file
 
 
 ## Files/Folders
-
+<ul>
+    <li> analyse.py(.py file that contains useful functions) </li>
+    <li> analuser.py(.py file that contains the main function) </li>
+</ul>
 
 # Dependencies
 
@@ -34,10 +36,6 @@ or run
 ```shell
 pip install -r requirements.txt
 ```
-
-## Documentation
-
-All project documentation is located in the `./doc`  folder.
 
 ## Radon
 

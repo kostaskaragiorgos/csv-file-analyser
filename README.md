@@ -23,6 +23,7 @@ cli app to analyse a csv file
 <ul>
     <li> analyse.py(.py file that contains useful functions) </li>
     <li> analuser.py(.py file that contains the main function) </li>
+    <li> images(images folder) </li>
 </ul>
 
 # Dependencies

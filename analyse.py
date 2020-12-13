@@ -20,6 +20,11 @@ def haveemptycells(dataframe):
     """
     return "YES" if dataframe.isnull().any else "NO"
 
+def count_empty(dataframe):
+    #print(dataframe.isnull().sum().value_counts())
+    return dataframe.isnull().sum().sum()
+
+
 def haveduplicates(dataframe):
     """ returns yes or no if the dataframe has duplicates
     Args:

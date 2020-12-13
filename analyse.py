@@ -20,8 +20,13 @@ def haveemptycells(dataframe):
     """
     return "YES" if dataframe.isnull().any else "NO"
 
-def count_empty(dataframe):
-    #print(dataframe.isnull().sum().value_counts())
+def count_empty(dataframe)-> int:
+    """ returns the number of empty cells
+    Args:
+        a dataframe
+    Returns:
+        an int
+    """
     return dataframe.isnull().sum().sum()
 
 

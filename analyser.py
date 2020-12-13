@@ -5,9 +5,9 @@ def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
     with open(outputfile, 'w') as outputf:
         outputf.write("Empty Cells:"+  haveemptycells(f))
-        outputf.write("Duplicates"+ haveduplicates(f))
-        outputf.write("Shape:"+ str(getshape(f)))
-        outputf.write("Index:"+ str(getindex(f)))
+        outputf.write("\nDuplicates"+ haveduplicates(f))
+        outputf.write("\nShape:"+ str(getshape(f)))
+        outputf.write("\nIndex:"+ str(getindex(f)))
         
 def main():
     if len(sys.argv) < 3:

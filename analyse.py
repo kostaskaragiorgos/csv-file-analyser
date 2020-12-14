@@ -31,6 +31,12 @@ def count_empty(dataframe)-> int:
 
 
 def getcolnames(dataframe):
+    """ returns the columns names
+    Args:
+        a dataframe
+    Returns:
+        an list
+    """
     return list(dataframe.columns)
 
 def getcoltypes(dataframe):

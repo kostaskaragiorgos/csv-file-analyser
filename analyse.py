@@ -30,6 +30,9 @@ def count_empty(dataframe)-> int:
     return dataframe.isnull().sum().sum()
 
 
+def getcolnames(dataframe):
+    return list(dataframe.columns)
+
 def haveduplicates(dataframe):
     """ returns yes or no if the dataframe has duplicates
     Args:

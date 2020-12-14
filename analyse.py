@@ -58,6 +58,12 @@ def haveduplicates(dataframe):
     return "YES" if dataframe.duplicated().any else "NO"
 
 def count_duplicates(dataframe):
+    """ returns the number of duplicates
+    Args:
+        a dataframe
+    Returns:
+        an int
+    """
     return dataframe.duplicated().sum().sum()
 
 def getshape(dataframe):

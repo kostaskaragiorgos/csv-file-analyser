@@ -1,14 +1,15 @@
 import sys
-from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty
+from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty, count_duplicates
 
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
     with open(outputfile, 'w') as outputf:
-        outputf.write("Empty Cells:"+  haveemptycells(f))
-        outputf.write("\nDuplicates"+ haveduplicates(f))
-        outputf.write("\nShape:"+ str(getshape(f)))
-        outputf.write("\nIndex:"+ str(getindex(f)))
+        outputf.write("Empty Cells: " +  haveemptycells(f))
+        outputf.write("\nDuplicates: "+ haveduplicates(f))
+        outputf.write("\nShape: "+ str(getshape(f)))
+        outputf.write("\nIndex: "+ str(getindex(f)))
         outputf.write("\nNumber of empty values: "+str(count_empty(f)))
+        outputf.write("\nNumber of duplicates: " +  str(count_duplicates(f)))
 
         
 def main():

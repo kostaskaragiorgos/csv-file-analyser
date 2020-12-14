@@ -33,6 +33,9 @@ def count_empty(dataframe)-> int:
 def getcolnames(dataframe):
     return list(dataframe.columns)
 
+def getcoltypes(dataframe):
+    return list(dataframe.dtypes)
+
 def haveduplicates(dataframe):
     """ returns yes or no if the dataframe has duplicates
     Args:

@@ -25,8 +25,8 @@ def main():
         outputfile = sys.argv[2]
     if filename.endswith(".csv") and outputfile.endswith(".txt"):
         GetReport(filename, outputfile)
-    elif not filename.endswith(".mps"):
-        print("Input file needs to be .mps file")
+    elif not filename.endswith(".csv"):
+        print("Input file needs to be .csv file")
         sys.exit(1)
     else:
         print("Output file needs to be .txt file")

@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 # How_to_use
 
-![How-to-use] (https://github.com/kostaskaragiorgos/csv-file-analyser/blob/master/images/csv%20file%20analyser.gif)
+<p><img src="images/csv file analyser.gif"/><p>
 
 
 ## Radon

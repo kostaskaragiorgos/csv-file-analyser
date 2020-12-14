@@ -39,6 +39,9 @@ def haveduplicates(dataframe):
     """
     return "YES" if dataframe.duplicated().any else "NO"
 
+def count_duplicates(dataframe):
+    return dataframe.duplicated().sum().sum()
+
 def getshape(dataframe):
     """ Returns the shape of a dataframe
     Args:

@@ -31,15 +31,21 @@ def count_empty(dataframe)-> int:
 
 
 def getcolnames(dataframe):
-    """ returns the columns names
+    """ returns the names of the columns
     Args:
         a dataframe
     Returns:
-        an list
+        a list
     """
     return list(dataframe.columns)
 
 def getcoltypes(dataframe):
+    """ returns the types of the columns
+    Args:
+        a dataframe
+    Returns:
+        a list
+    """
     return list(dataframe.dtypes)
 
 def haveduplicates(dataframe):

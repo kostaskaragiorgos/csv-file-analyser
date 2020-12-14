@@ -1,6 +1,6 @@
 import sys
 from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty, count_duplicates
-from analyse import getcolnames
+from analyse import getcolnames, getcoltypes
 
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
@@ -10,6 +10,7 @@ def GetReport(inputfile, outputfile):
         outputf.write("\nShape: "+ str(getshape(f)))
         outputf.write("\nIndex: "+ str(getindex(f)))
         outputf.write("\nColumn Names: "+ str(getcolnames(f)))
+        outputf.write("\nColumn Data Types: "+ str(getcoltypes(f)))
         outputf.write("\nNumber of empty values: "+str(count_empty(f)))
         outputf.write("\nNumber of duplicates: " +  str(count_duplicates(f)))
 

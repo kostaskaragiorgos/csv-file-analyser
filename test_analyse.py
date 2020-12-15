@@ -9,5 +9,6 @@ def test_analyse():
     assert analyse.haveemptycells(data) == "YES"
     assert analyse.haveduplicates(data) == "NO"
     assert analyse.count_empty(data) == 1
+    assert len(analyse.getcoltypes(data)) == 4
 
 

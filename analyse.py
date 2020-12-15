@@ -55,7 +55,7 @@ def haveduplicates(dataframe):
     Returns:
         YES OR NO
     """
-    return "YES" if dataframe.duplicated().any else "NO"
+    return "YES" if dataframe.duplicated().all() else "NO"
 
 def count_duplicates(dataframe):
     """ returns the number of duplicates

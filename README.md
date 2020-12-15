@@ -11,6 +11,7 @@ cli app to analyse a csv file
   * [Table of contents](#Table_of_contents)
   * [Files/Folders](#Files/Folders)
   * [Dependencies](#Dependencies)
+  * [How_to_use](#How_to_use)
   * [Radon](#Radon)
     * [Radon cc](#Radon_cc)
     * [Radon hal](#Radon_hal)
@@ -46,6 +47,9 @@ pip install -r requirements.txt
 
 <p><img src="images/csv file analyser.gif"/><p>
 
+```shell
+python analyser.py <csv file> <txt file>
+```
 
 ## Radon
 

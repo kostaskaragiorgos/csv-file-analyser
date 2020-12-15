@@ -8,5 +8,6 @@ def test_analyse():
     assert len(data) == 8
     assert analyse.haveemptycells(data) == "YES"
     assert analyse.haveduplicates(data) == "NO"
+    assert analyse.count_empty(data) == 1
 
 

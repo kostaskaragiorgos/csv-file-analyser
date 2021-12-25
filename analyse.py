@@ -83,3 +83,10 @@ def getindex(dataframe):
         the index number of the dataframe
     """
     return dataframe.index
+
+
+
+def percent_missing(dataframe):
+    percent_nan = 100* dataframe.isnull().sum()/ len(dataframe)
+    percent_nan = percent_nan[percent_nan> 0].sort_values()
+    return percent_nan

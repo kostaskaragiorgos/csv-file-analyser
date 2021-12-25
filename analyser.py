@@ -17,7 +17,7 @@ def GetReport(inputfile, outputfile):
 
         
 def main():
-    if len(sys.argv) < 3:
+    if len(sys.argv) != 3:
         print("The arguments should be the script name , a .csv file as an input file and a .txt file as an output file")
         sys.exit(1)
     else:

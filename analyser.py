@@ -1,11 +1,12 @@
 import sys
 from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty, count_duplicates
-from analyse import getcolnames, getcoltypes
+from analyse import getcolnames, getcoltypes, percent_missing
 
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
     with open(outputfile, 'w') as outputf:
         outputf.write("Empty Cells: " +  haveemptycells(f))
+        outputf.write("\n Percentage of missing values Per column" + percent_missing(f))
         outputf.write("\nDuplicates: "+ haveduplicates(f))
         outputf.write("\nShape: "+ str(getshape(f)))
         outputf.write("\nIndex: "+ str(getindex(f)))

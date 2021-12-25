@@ -5,13 +5,13 @@ from analyse import getcolnames, getcoltypes, percent_missing
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
     with open(outputfile, 'w') as outputf:
-        outputf.write("Empty Cells: " +  haveemptycells(f))
-        outputf.write("\n Percentage of missing values Per column" + percent_missing(f))
+        outputf.write("Column Names: "+ str(getcolnames(f)))
+        outputf.write("\nColumn Data Types: "+ str(getcoltypes(f)))
+        outputf.write("\nEmpty Cells: " +  haveemptycells(f))
+        outputf.write("\nPercentage of missing values Per column: "+ str(percent_missing(f)))
         outputf.write("\nDuplicates: "+ haveduplicates(f))
         outputf.write("\nShape: "+ str(getshape(f)))
         outputf.write("\nIndex: "+ str(getindex(f)))
-        outputf.write("\nColumn Names: "+ str(getcolnames(f)))
-        outputf.write("\nColumn Data Types: "+ str(getcoltypes(f)))
         outputf.write("\nNumber of empty values: "+str(count_empty(f)))
         outputf.write("\nNumber of duplicates: " +  str(count_duplicates(f)))
 

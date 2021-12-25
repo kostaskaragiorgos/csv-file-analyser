@@ -87,6 +87,13 @@ def getindex(dataframe):
 
 
 def percent_missing(dataframe):
+    """
+    Returns the percentage of missing values (over 0) for every column.
+    Args:
+        A dataframe
+    Returns:
+        A pandas Series
+    """
     percent_nan = 100* dataframe.isnull().sum()/ len(dataframe)
     percent_nan = percent_nan[percent_nan> 0].sort_values()
     return percent_nan

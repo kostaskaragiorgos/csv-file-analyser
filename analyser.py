@@ -1,6 +1,8 @@
 import sys
+import logging
 from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty, count_duplicates
 from analyse import getcolnames, getcoltypes, percent_missing
+logging.basicConfig(filename='info.log',format='%(asctime)s %(message)s', level=logging.INFO)
 
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
@@ -19,6 +21,7 @@ def GetReport(inputfile, outputfile):
 def main():
     if len(sys.argv) != 3:
         print("The arguments should be the script name , a .csv file as an input file and a .txt file as an output file")
+        logging.error("The arguments should be the script name , a .csv file as an input file and a .txt file as an output file")
         sys.exit(1)
     else:
         script = sys.argv[0]

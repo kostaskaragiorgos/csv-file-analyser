@@ -2,7 +2,7 @@ import sys
 import logging
 from analyse import createdataframe, haveemptycells, haveduplicates, getshape, getindex, count_empty, count_duplicates
 from analyse import getcolnames, getcoltypes, percent_missing
-logging.basicConfig(filename='info.log',format='%(asctime)s %(message)s', level=logging.INFO)
+logging.basicConfig(filename='info.log',format='%(levelname)s %(asctime)s %(message)s', level=logging.DEBUG)
 
 def GetReport(inputfile, outputfile):
     f = createdataframe(inputfile)
@@ -30,11 +30,13 @@ def main():
     if filename.endswith(".csv") and outputfile.endswith(".txt"):
         GetReport(filename, outputfile)
     elif not filename.endswith(".csv"):
-        print("Input file needs to be .csv file")
+        print("Input file needs to be .csv file0")
+        logging.error("Input file needs to be .csv file")
         sys.exit(1)
     else:
         print("Output file needs to be .txt file")
         sys.exit(1)
+        logging.error("Output file needs to be .txt file")
 
 if __name__ == '__main__':
    main()

@@ -29,6 +29,7 @@ def main():
         outputfile = sys.argv[2]
     if filename.endswith(".csv") and outputfile.endswith(".txt"):
         GetReport(filename, outputfile)
+        logging.info("Success")
     elif not filename.endswith(".csv"):
         print("Input file needs to be .csv file0")
         logging.error("Input file needs to be .csv file")
